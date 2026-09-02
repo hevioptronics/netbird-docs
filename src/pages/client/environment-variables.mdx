@@ -125,6 +125,7 @@ These control the exponential backoff when the client loses its connection to th
 | Variable | Platform | Description |
 |---|---|---|
 | `NB_RELAY_HC_ATTEMPT_THRESHOLD` | All | Number of consecutive failed WebSocket pings before the client considers a relay server unreachable and switches to a different one (default: `1`). |
+| `NB_RELAY_PEER_QUEUE_SIZE` | All | Number of inbound messages the client can queue per relayed peer before dropping (default: `100`). Increase this when peers send large bursts over a relay, for example video keyframes of several hundred packets. The client logs a warning when messages are dropped. |
 
 ## Management
 
